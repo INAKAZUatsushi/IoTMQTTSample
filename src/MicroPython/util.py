@@ -10,7 +10,7 @@ def create_mqtt_client(client_id, hostname, username, password, port=8883, keepa
     return c
 
 def get_telemetry_topic(device_id):
-    return get_topic_base(device_id) + "/messages/events/"
+    return get_topic_base(device_id) + "/messages/events/$.ct=application%2Fjson&$.ce=utf-8"
     
 def get_c2d_topic(device_id):
      return get_topic_base(device_id) + "/messages/devicebound/#"
